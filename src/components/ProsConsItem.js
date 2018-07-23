@@ -28,11 +28,10 @@ const itemTarget = {
         const clientOffset = monitor.getClientOffset();
         const hoverClientY = clientOffset.y - hoverBoundingRect.top;
 
-        if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
-            return;
-        }
-
-        if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
+        if (
+            (dragIndex < hoverIndex && hoverClientY < hoverMiddleY )
+            || (dragIndex > hoverIndex && hoverClientY > hoverMiddleY)
+        ) {
             return;
         }
 
@@ -79,7 +78,7 @@ ProsConsItem.propTypes = {
     moveItem: PropTypes.func.isRequired,
     title: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired
+    id: PropTypes.number.isRequired,
 };
 
 export default flow(

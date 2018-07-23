@@ -4,7 +4,7 @@ import {
     createProsItem,
     createConsItem,
     editProsTitle,
-    editConsTitle
+    editConsTitle,
 } from '../actions/action-creators/prosCons';
 import {consListSelector, prosListSelector} from '../store/selectors';
 import ProsConsList from '../components/ProsConsList';
@@ -18,8 +18,14 @@ import React from 'react';
 class ProsCons extends React.Component {
     render() {
         const {
-            prosList, consList, sortProsListWithDrag, sortConsListWithDrag,
-            createProsItem, createConsItem, editProsTitle, editConsTitle
+            prosList,
+            consList,
+            sortProsListWithDrag,
+            sortConsListWithDrag,
+            createProsItem,
+            createConsItem,
+            editProsTitle,
+            editConsTitle,
         } = this.props;
 
         return (
