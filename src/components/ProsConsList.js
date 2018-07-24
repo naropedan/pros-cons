@@ -53,11 +53,11 @@ class ProsConsList extends React.Component {
         const itemsCount = items.length;
 
         return (
-            <div className='col-content'>
-                <div className='col-header'>
+            <div className="col-content">
+                <div className="col-header">
                     <span>{label}</span>
                 </div>
-                <div className='list-data'>
+                <div className="list-data">
                     {items.map((item, index) => (
                         <ProsConsItem
                             selectedRowIndex={selectedRowIndex}
